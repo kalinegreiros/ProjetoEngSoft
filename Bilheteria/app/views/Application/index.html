@@ -1,4 +1,22 @@
-#{extends 'main.html' /}
-#{set title:'Home' /}
+#{extends 'pagteste.html' /}
+#{set title:'P' /}
 
-#{welcome /}
+<!--Testando sintaxe-->
+#{ if eve.size() == 2}
+	Olá 2
+#{/if}
+#{else}
+	Olá Outro número
+#{/else}
+
+<div> Lista aqui
+<ol>
+#{list items:eve, as:'evento'}
+		<li>${evento.nome}</li>
+ #{/list}
+ </ol>
+
+</div>
+<!-- Esse Aplication.eventos() corresponde ao método eventos no Controlador -->
+<div><a href="@{Application.eventos()}">Gerenciar eventos</a></div>
+<div><a href="@{Application.ingressos()}">Comprar ingressos</a></div>
