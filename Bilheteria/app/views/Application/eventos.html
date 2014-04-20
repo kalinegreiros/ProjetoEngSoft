@@ -1,4 +1,20 @@
 #{extends 'pagteste.html' /}
 #{set title:'Gerenciar eventos' /}
 
-Aqui vai ficar o formulário para que o operador adicione os eventos
+<h1>Um formulário simples </h1>
+	#{form @Application.cadastrarEvento()}
+	
+	<div class="linha">
+		<div class="esq">
+			<p><label for="nome">Nome:</label></p>
+		</div>
+		<div class="dir">
+			<p><input type="text" name="nome" id="nome" value="${params.nome}" /></p>
+		</div>
+	</div>
+	
+	<div class="bot-submeter">
+		<p><input type="submit" value="Cadastrar o Evento" /></p>
+	</div>
+
+#{/form}

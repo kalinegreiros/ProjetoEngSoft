@@ -2,6 +2,8 @@ package controllers;
 
 import play.*;
 import play.mvc.*;
+import play.data.*;
+import play.data.validation.*;
 
 import java.util.*;
 
@@ -16,6 +18,17 @@ public class Application extends Controller {
     	Logger.info("Resutado: " + eve.size());
     	System.out.println(eve.size());
         render(eve);
+    }
+    
+    public static void cadastrarEvento(@Required String nome){
+    	
+    	Evento evento = new Evento(nome);
+		/*if (validation.hasErrors()) {
+			render("Application/inserir.html", evento);
+		}*///Quando tiver validação faz algo assim
+
+		evento.save();
+		index();
     }
     
     public static void eventos() {
