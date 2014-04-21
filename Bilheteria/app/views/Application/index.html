@@ -12,7 +12,9 @@
 <div> Lista aqui
 <ol>
 #{list items:eve, as:'evento'}
-		<li>${evento.nome}</li>
+		<li>${evento.nome}	
+		   <dt>- ${evento.dia}/${evento.mes}/${evento.ano}, ${evento.hora} -<dt>
+		</li>
  #{/list}
  </ol>
 

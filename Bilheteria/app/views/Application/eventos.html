@@ -1,15 +1,27 @@
 #{extends 'pagteste.html' /}
 #{set title:'Gerenciar eventos' /}
 
-<h1>Um formulário simples </h1>
+<h1>Adição de Evento <!-- Isso é um comentário! --> </h1>
 	#{form @Application.cadastrarEvento()}
 	
 	<div class="linha">
 		<div class="esq">
-			<p><label for="nome">Nome:</label></p>
+			<p><label for="nome">Nome do Evento:</label></p>
 		</div>
 		<div class="dir">
 			<p><input type="text" name="nome" id="nome" value="${params.nome}" /></p>
+		</div>
+		<div class="esq">
+			<p><label for="data">Dia do Evento:</label></p>
+		</div>
+		    <p><input type="int" name="dia" id="dia" value="${params.dia}" /></p>
+		    <p><input type="int" name="mes" id="mes" value="${params.mes}" /></p>
+		    <p><input type="int" name="ano" id="ano" value="${params.ano}" /></p>
+		<div class="esq">
+			<p><label for="hora">Horário do Evento:</label></p>
+		</div>
+		<div class="dir">
+			<p><input type="time" name="hora" id="hora" value="${params.hora}" /></p>
 		</div>
 	</div>
 	
